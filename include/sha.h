@@ -24,3 +24,4 @@ std::string msgToBinary(std::string);
 
 std::string toBinary(unsigned int, int);
 std::string toHexadecimal(std::string binary);
+std::string litEnd(std::string);

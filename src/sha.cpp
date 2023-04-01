@@ -29,6 +29,18 @@ std::string toBinary(unsigned int num, int binarySize){
     return revBin;
 }
 
+std::string litEnd(std::string msg){
+    std::string be = "";
+    int index = msg.size()-2;
+    while(index >= 0){
+        be += (char)msg[index];
+        be += (char)msg[index+1];
+        //std::cout << msg[index] << " " << msg[index+1] << std::endl;
+        index -= 2;
+    }
+    return be;
+}
+
 //Convert to hexademical
 std::string toHexadecimal(std::string binary) {
     std::string hexadecimal;
