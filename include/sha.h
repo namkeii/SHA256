@@ -13,6 +13,9 @@ const unsigned int g = 0x1f83d9ab;
 const unsigned int h = 0x5be0cd19;
 
 
+extern std::unordered_map<std::string, char> lookup;
+extern std::unordered_map<char, std::string> clookup;
+
 /*Padding*/
 /*********/
 

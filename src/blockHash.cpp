@@ -21,7 +21,6 @@ void Block::makeSchedule(){
     //Filling first 15 words
     for(int i_msg = 0; i_msg < 512; i_msg+=32){
         std::string word = msg.substr(i_msg,32);
-        std::cout << "word: " << word << " " << toInteger(word) << std::endl;
         schedule.push_back(toInteger(word));
     }
     //Making the remaining words
@@ -32,7 +31,6 @@ void Block::makeSchedule(){
 }
 
 void Block::compress(){
-    std::cout << "COMPRESS" << std::endl;
     for(int i_comp = 0; i_comp < 64; i_comp++){
         unsigned T1 = ADD(S1(hash[4]), CH(hash[4], hash[5], hash[6]), hash[7], K[i_comp]);
         T1 = ADD(T1,schedule[i_comp]);
